@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
 import Layout from "./containers/Layout/Layout";
-import "./App.css";
+import Main from "./containers/Main/Main";
 
 function App() {
   return (
     <Fragment>
-      <Layout></Layout>
+      <Layout>
+        <Main />
+      </Layout>
     </Fragment>
   );
 }

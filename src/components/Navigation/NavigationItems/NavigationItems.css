@@ -1,0 +1,5 @@
+.List {
+  list-style: none;
+  display: flex;
+  margin-right: 40px;
+}

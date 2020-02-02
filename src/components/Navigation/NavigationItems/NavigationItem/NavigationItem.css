@@ -1,0 +1,12 @@
+.Item a {
+  text-decoration: none;
+  color: #eee;
+  transition: 0.2s all ease-out;
+  padding: 15px;
+}
+
+.Item a:hover,
+.Item a:active {
+  color: #3aeb34;
+  border-bottom: 3px solid #3aeb34;
+}

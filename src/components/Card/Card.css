@@ -1,0 +1,29 @@
+.Card {
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.Recipe {
+  width: 45vw;
+  padding: 0 30px;
+}
+
+.Recipe h3 {
+  font-size: 30px;
+}
+
+.Recipe div {
+  margin-left: 15px;
+}
+
+.Recipe ul {
+  list-style: none;
+  margin-left: -25px;
+}
+
+.Image img {
+  width: 50vw;
+  padding-top: 40px;
+}
