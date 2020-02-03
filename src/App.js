@@ -1,14 +1,15 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import Layout from "./containers/Layout/Layout";
 import Main from "./containers/Main/Main";
 
 function App() {
   return (
-    <Fragment>
+    <BrowserRouter>
       <Layout>
         <Main />
       </Layout>
-    </Fragment>
+    </BrowserRouter>
   );
 }
 

@@ -9,11 +9,7 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-      .then(response => {
-        this.setState({ drinks: response.data.drinks[0] });
-      });
+    this.randomCocktailHandler();
   }
 
   randomCocktailHandler = drinks => {
