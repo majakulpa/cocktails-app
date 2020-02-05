@@ -1,22 +1,19 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import NavigationItems from "./../NavigationItems/NavigationItems";
 import classes from "./Toolbar.css";
 import Logo from "./../../Logo/Logo";
-import Main from "./../../../containers/Main/Main";
 
 const toolbar = props => {
   return (
-    <header className={classes.Navbar}>
-      <div className={classes.Name}>
-        <Logo />
-        <p>
-          Cocktail<span>Mixer</span>
-        </p>
-      </div>
+    <div className={classes.Navbar}>
+      <NavLink to="/">
+        <div className={classes.Name}>Cocktail Mixer</div>
+      </NavLink>
       <nav>
         <NavigationItems />
       </nav>
-    </header>
+    </div>
   );
 };
 

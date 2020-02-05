@@ -13,23 +13,6 @@
 }
 
 .Name {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.Name > * {
-  padding: 0 10px 0 0;
-}
-
-.Name p {
-  color: #3aeb34;
-  font-weight: 300;
-  font-size: 18px;
-  text-shadow: 0 1px 2px #3aeb34;
-  letter-spacing: 2px;
-}
-
-.Name p span {
-  font-weight: 600;
+  text-decoration: none;
+  color: white;
 }

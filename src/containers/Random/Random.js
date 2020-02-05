@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
-import Card from "./../../components/Card/Card";
-import Button from "./../../components/Button/Button";
+import Card from "../../components/Card/Card";
+import Button from "../../components/Button/Button";
 
-class Main extends Component {
+class Random extends Component {
   state = {
     drinks: []
   };
@@ -31,4 +31,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Random;

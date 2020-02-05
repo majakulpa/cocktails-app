@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import classes from "./Layout.css";
 import Toolbar from "./../../components/Navigation/Toolbar/Toolbar";
+import Main from "./../../components/Main/Main";
 
 class Layout extends Component {
   state = {};
@@ -8,7 +8,7 @@ class Layout extends Component {
     return (
       <Fragment>
         <Toolbar />
-        <main className={classes.Main}>{this.props.children}</main>
+        <Main />
       </Fragment>
     );
   }
