@@ -1,5 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import classes from "./Welcome.css";
+import "./../../components/GlobalStyles/Style.css";
 
 const welcome = () => (
   <div className={classes.Main}>
@@ -12,7 +14,10 @@ const welcome = () => (
         <div className={classes.Base}></div>
       </div>
     </div>
-    <div className={classes.Text}>cocktail mixer</div>
+    <NavLink to="/random" className={classes.TextLink}>
+      <div className={classes.Text}>cocktail mixer</div>
+      <div className={classes.TextSmall}>go to recipes</div>
+    </NavLink>
   </div>
 );
 
