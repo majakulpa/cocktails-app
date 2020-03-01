@@ -1,10 +1,11 @@
 import React from "react";
 import classes from "./Button.css";
 
-const button = ({ clicked }) => {
+const button = ({ clicked, text }) => {
   return (
     <button onClick={clicked} className={classes.Button}>
-      Next
+      <span>{text}</span>
+      <div className={classes.Liquid} />
     </button>
   );
 };

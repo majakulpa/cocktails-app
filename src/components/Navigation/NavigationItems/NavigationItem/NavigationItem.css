@@ -2,7 +2,8 @@
   text-decoration: none;
   color: #c6e2ff;
   transition: 0.5s all ease;
-  padding: 15px;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .Item a:hover,

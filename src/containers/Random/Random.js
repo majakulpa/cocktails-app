@@ -24,8 +24,8 @@ class Random extends Component {
     const { drinks } = this.state;
     return (
       <Fragment>
+        <Button clicked={this.randomCocktailHandler} text="Next" />
         <Card drink={drinks} />
-        <Button clicked={this.randomCocktailHandler} />
       </Fragment>
     );
   }

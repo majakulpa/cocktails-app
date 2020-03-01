@@ -1,11 +1,84 @@
 .Button {
   cursor: pointer;
-  padding: 5px 20px;
-  font-size: 22px;
-  border: none;
-  color: #3aeb34;
+  position: relative;
+  padding: 15px 40px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 40px;
+  border: 1px solid #c6e2ff;
+  box-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
+    0 0 2px rgba(202, 228, 225, 0.34), 0 0 2px rgba(30, 132, 242, 0.52),
+    0 0 4px rgba(30, 132, 242, 0.92), 0 0 10px rgba(30, 132, 242, 0.78),
+    0 0 10px rgba(30, 132, 242, 0.92);
 }
 
 .Button:focus {
   outline: none;
+}
+
+.Button span {
+  position: relative;
+  color: #c6e2ff;
+  font-size: 20px;
+  font-family: Arial;
+  letter-spacing: 3px;
+  z-index: 1;
+  text-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
+    0 0 10px rgba(202, 228, 225, 0.34), 0 0 10px rgba(30, 132, 242, 0.52),
+    0 0 10px rgba(30, 132, 242, 0.92), 0 0 20px rgba(30, 132, 242, 0.78),
+    0 0 20px rgba(30, 132, 242, 0.92);
+}
+
+.Button .Liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 222, 255, 1);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.Button .Liquid::after,
+.Button .Liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+  box-shadow: inset 0 0 6px rgba(202, 228, 225, 0.98),
+    0 0 30px rgba(202, 228, 225, 0.42), inset 0 0 12px rgba(30, 132, 242, 0.58),
+    inset 0 0 22px rgba(30, 132, 242, 0.84),
+    inset 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px rgba(30, 132, 242, 1);
+}
+
+.Button .Liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.Button .Liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+button:hover .Liquid {
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
 }

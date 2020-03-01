@@ -59,9 +59,12 @@ const card = ({ drink }) => {
         <h4>Glass</h4>
         <div>{drink.strGlass}</div>
       </div>
-      <div className={classes.Image}>
-        <img src={drink.strDrinkThumb} alt="Random cocktail" />
-      </div>
+      <div
+        className={classes.Image}
+        style={{
+          backgroundImage: `url(${drink.strDrinkThumb})`
+        }}
+      ></div>
     </div>
   );
 };

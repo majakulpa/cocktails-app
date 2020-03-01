@@ -14,21 +14,17 @@
 
 .Text {
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #c6e2ff;
   text-transform: capitalize;
   font-family: "Vibur", cursive;
   cursor: pointer;
   transition: 0.5s all ease;
+}
+
+.Text:hover {
   text-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
     0 0 10px rgba(202, 228, 225, 0.34), 0 0 10px rgba(30, 132, 242, 0.52),
     0 0 10px rgba(30, 132, 242, 0.92), 0 0 10px rgba(30, 132, 242, 0.78),
     0 0 10px rgba(30, 132, 242, 0.92);
-}
-
-.Text:hover {
-  text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
-    0 0 20px rgba(202, 228, 225, 0.42), 0 0 20px rgba(30, 132, 242, 0.58),
-    0 0 20px rgba(30, 132, 242, 0.84), 0 0 20px rgba(30, 132, 242, 0.88),
-    0 0 20px rgba(30, 132, 242, 1);
 }

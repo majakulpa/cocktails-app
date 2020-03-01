@@ -7,13 +7,28 @@ const navigationItems = () => (
   <Fragment>
     <ul className={classes.List}>
       <NavigationItem>
-        <NavLink to="/random">Home</NavLink>
+        <NavLink
+          to="/random"
+          activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
+        >
+          Our Pick
+        </NavLink>
       </NavigationItem>
       <NavigationItem>
-        <NavLink to="/recipes">Recipes</NavLink>
+        <NavLink
+          to="/recipes"
+          activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
+        >
+          Recipes
+        </NavLink>
       </NavigationItem>
       <NavigationItem>
-        <NavLink to="/about">About</NavLink>
+        <NavLink
+          to="/about"
+          activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
+        >
+          About
+        </NavLink>
       </NavigationItem>
     </ul>
   </Fragment>

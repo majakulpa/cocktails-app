@@ -94,19 +94,17 @@
 
 .TextLink {
   text-decoration: none;
-  text-align: center;
-}
-.Text {
   margin-top: 5rem;
-  font-size: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.TextSmall {
-  font-size: 2.5rem;
-}
-.Text,
-.TextSmall {
-  color: #c6e2ff;
+
+.Text {
   text-transform: capitalize;
+  margin-bottom: 1rem;
+  color: #c6e2ff;
+  font-size: 3rem;
   font-family: "Vibur", cursive;
   cursor: pointer;
   transition: 0.5s all ease;
@@ -116,10 +114,18 @@
     0 0 20px rgba(30, 132, 242, 0.92);
 }
 
-.Text:hover,
-.TextSmall:hover {
+.Text:hover {
   text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
     0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
     0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
     0 0 60px rgba(30, 132, 242, 1);
+}
+
+@keyframes pulsate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(0.1rem);
+  }
 }
