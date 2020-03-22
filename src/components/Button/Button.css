@@ -1,12 +1,13 @@
 .Button {
   cursor: pointer;
   position: relative;
-  padding: 15px 40px;
+  padding: 10px 30px;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
   border-radius: 40px;
+  font-family: inherit;
   border: 1px solid #c6e2ff;
   box-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
     0 0 2px rgba(202, 228, 225, 0.34), 0 0 2px rgba(30, 132, 242, 0.52),
@@ -22,7 +23,6 @@
   position: relative;
   color: #c6e2ff;
   font-size: 20px;
-  font-family: Arial;
   letter-spacing: 3px;
   z-index: 1;
   text-shadow: 0 0 2px rgba(202, 228, 225, 0.92),

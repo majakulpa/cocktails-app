@@ -1,13 +1,15 @@
 import React from "react";
 import classes from "./Card.css";
 
-const card = ({ drink }) => {
+const card = ({ name, glass, instructions, image, ingredients }) => {
   return (
     <div className={classes.Card}>
       <div className={classes.Recipe}>
-        <h3>{drink.strDrink}</h3>
+        <h3>{name}</h3>
         <h4>Ingredients</h4>
-        <ul>
+        <span>{ingredients}</span>
+
+        {/* <ul>
           <li>
             {drink.strMeasure1} {drink.strIngredient1}
           </li>
@@ -53,18 +55,28 @@ const card = ({ drink }) => {
           <li>
             {drink.strMeasure15} {drink.strIngredient15}
           </li>
-        </ul>
+        </ul> */}
         <h4>Instructions</h4>
-        <div>{drink.strInstructions}</div>
+        <div>{instructions}</div>
         <h4>Glass</h4>
-        <div>{drink.strGlass}</div>
+        <div>{glass}</div>
       </div>
       <div
         className={classes.Image}
         style={{
-          backgroundImage: `url(${drink.strDrinkThumb})`
+          backgroundImage: `url(${image})`
         }}
-      ></div>
+      />
+      <div>
+        <h4>Ingredients:</h4>
+        {ingredients.map((ingredient, index) => {
+          return ingredient !== " " && ingredient !== "null null" ? (
+            <span key={index}>
+              {ingredient} <br />
+            </span>
+          ) : null;
+        })}
+      </div>
     </div>
   );
 };

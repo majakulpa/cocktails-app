@@ -16,18 +16,18 @@ const navigationItems = () => (
       </NavigationItem>
       <NavigationItem>
         <NavLink
-          to="/recipes"
+          to="/cocktails"
           activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
         >
-          Recipes
+          Cocktails
         </NavLink>
       </NavigationItem>
       <NavigationItem>
         <NavLink
-          to="/about"
+          to="/ingredients"
           activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
         >
-          About
+          Ingredients
         </NavLink>
       </NavigationItem>
     </ul>
