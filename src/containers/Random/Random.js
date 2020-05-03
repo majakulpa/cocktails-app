@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
-import Card from "../../components/Card/Card";
+//import axios from "axios";
+//import Card from "../../components/Card/Card";
 import CocktailList from "../../components/CocktailList/CocktailList";
 import Button from "../../components/Button/Button";
 import classes from "./Random.css";
@@ -13,7 +13,7 @@ class Random extends Component {
   };
 
   componentDidMount() {
-    this.handleSubmitRandom();
+    this.randomCocktailHandler();
   }
 
   // randomCocktailHandler = drinks => {
@@ -24,7 +24,7 @@ class Random extends Component {
   //     });
   // };
 
-  handleSubmitRandom = event => {
+  randomCocktailHandler = event => {
     // event.preventDefault();
     const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
     this.setState({ loading: true });
@@ -42,16 +42,9 @@ class Random extends Component {
     });
 
     return (
-      // <div className={classes.Container}>
-      //   <div className={classes.Button}>
-      //     <Button clicked={this.randomCocktailHandler} text="Next" />
-      //   </div>
-      //   <CocktailList />
-      // </div>
       <div className={classes.Container}>
-        <form className={classes.Button} onSubmit={this.handleSubmitRandom}>
-          <Button clicked={this.randomCocktailHandler} text="Next" />
-        </form>
+        <Button clicked={this.randomCocktailHandler} text="Next" />
+
         {loading ? "Loading..." : <CocktailList cocktail={filteredCocktails} />}
       </div>
     );

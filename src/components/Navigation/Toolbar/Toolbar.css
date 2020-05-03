@@ -9,15 +9,14 @@
   justify-content: space-between;
   padding: 0 20px;
   z-index: 200;
-  background: #0c0c0c;
+  background: #141414;
 }
 
 .Text {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #c6e2ff;
-  text-transform: capitalize;
-  font-family: "Vibur", cursive;
+  font-family: "Orbitron", sans-serif;
   cursor: pointer;
   transition: 0.5s all ease;
 }

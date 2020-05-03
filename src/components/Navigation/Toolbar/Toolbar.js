@@ -7,7 +7,7 @@ const toolbar = props => {
   return (
     <div className={classes.Navbar}>
       <NavLink to="/" className={classes.Text}>
-        <div>Cocktail Mixer</div>
+        <div>cr</div>
       </NavLink>
       <nav>
         <NavigationItems />

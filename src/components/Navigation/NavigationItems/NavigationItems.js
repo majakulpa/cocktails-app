@@ -1,33 +1,19 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import NavigationItem from "./NavigationItem/NavigationItem";
-import classes from "./NavigationItems.css";
+import classes from "./../NavigationItems/NavigationItem/NavigationItem.css";
 
 const navigationItems = () => (
   <Fragment>
     <ul className={classes.List}>
       <NavigationItem>
-        <NavLink
-          to="/random"
-          activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
-        >
-          Our Pick
+        <NavLink to="/random" activeClassName={classes.Active}>
+          Random Cocktail
         </NavLink>
       </NavigationItem>
       <NavigationItem>
-        <NavLink
-          to="/cocktails"
-          activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
-        >
-          Cocktails
-        </NavLink>
-      </NavigationItem>
-      <NavigationItem>
-        <NavLink
-          to="/ingredients"
-          activeStyle={{ borderBottom: "3px solid #c6e2ff" }}
-        >
-          Ingredients
+        <NavLink to="/cocktails" activeClassName={classes.Active}>
+          Recipes
         </NavLink>
       </NavigationItem>
     </ul>

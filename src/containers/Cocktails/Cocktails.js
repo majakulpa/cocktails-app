@@ -18,7 +18,7 @@ class Cocktails extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${this.state.name}`;
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${this.state.name}`;
 
     this.setState({ loading: true });
 

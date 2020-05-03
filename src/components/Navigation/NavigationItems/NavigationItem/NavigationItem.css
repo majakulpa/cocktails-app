@@ -1,15 +1,58 @@
+.List {
+  list-style: none;
+  display: flex;
+  margin-right: 40px;
+}
+
 .Item a {
   text-decoration: none;
+  position: relative;
+  padding: 0.5rem 1rem;
   color: #c6e2ff;
-  transition: 0.5s all ease;
-  padding: 1rem;
-  letter-spacing: 0.1rem;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  user-select: none;
 }
 
 .Item a:hover,
-.Item a:active {
+.Active {
   text-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
     0 0 10px rgba(202, 228, 225, 0.34), 0 0 10px rgba(30, 132, 242, 0.52),
     0 0 10px rgba(30, 132, 242, 0.92), 0 0 20px rgba(30, 132, 242, 0.78),
     0 0 20px rgba(30, 132, 242, 0.92);
+}
+
+.Item a:focus {
+  outline: none;
+}
+
+.Item a:before {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.Itemhover a:before {
+  transition-delay: 0s;
+  box-shadow: inset 0px 11px 8px -10px #c6e2ff,
+    inset 0px -11px 8px -10px #c6e2ff;
+}
+
+.Item a:before {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  border: 1px solid #c6e2ff;
+  border-left: 0;
+  border-right: 0;
+}
+
+.Item a:hover:before {
+  left: 0;
+  width: 100%;
 }
