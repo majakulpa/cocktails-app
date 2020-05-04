@@ -4,6 +4,7 @@
   overflow: hidden;
   border-radius: 10px;
   color: #eee;
+  margin: 2rem auto;
 }
 .Recipe {
   z-index: 2;
@@ -30,7 +31,6 @@
     position: relative;
     display: block;
     line-height: 1.7;
-    margin: 4rem auto 0 auto;
     max-width: 800px;
   }
 
@@ -40,8 +40,8 @@
     padding: 0.5rem 9rem 2rem 2rem;
     background: linear-gradient(
       to right,
-      #100f0f 40%,
-      #212022 80%,
+      #212022 40%,
+      #100f0f 80%,
       transparent 100%
     );
   }
@@ -71,7 +71,6 @@
   .Card {
     display: flex;
     flex-flow: column-reverse;
-    margin: 2rem auto;
   }
   .Image {
     width: 100%;
