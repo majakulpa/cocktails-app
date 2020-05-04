@@ -1,0 +1,60 @@
+.Main {
+  text-align: center;
+}
+.Scroll {
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+.Search input {
+  color: #eee;
+}
+.Search input,
+.Search button {
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  margin: 2rem 0;
+  font-family: "Orbitron", sans-serif;
+  background: none;
+
+  box-shadow: inset 0px 11px 8px -10px #c6e2ff,
+    inset 0px -11px 8px -10px #c6e2ff;
+}
+.Search button {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #c6e2ff;
+}
+.Search button:hover {
+  text-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
+    0 0 10px rgba(202, 228, 225, 0.34), 0 0 10px rgba(30, 132, 242, 0.52),
+    0 0 10px rgba(30, 132, 242, 0.92), 0 0 20px rgba(30, 132, 242, 0.78),
+    0 0 20px rgba(30, 132, 242, 0.92);
+}
+.Search input:focus,
+.Search button:focus {
+  outline: none;
+}
+.Main p {
+  letter-spacing: 0.1rem;
+  color: #c6e2ff;
+}
+@media (max-width: 520px) {
+  .Search input,
+  .Search button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .Search {
+    width: 100vw;
+    white-space: nowrap;
+  }
+  .Search input {
+    width: 60%;
+  }
+  .Search button {
+    width: 40%;
+  }
+}

@@ -10,7 +10,7 @@ const main = () => (
     <Switch>
       <Route path="/" exact component={Welcome} />
       <Route path="/random" component={Random} />
-      <Route path="/cocktails" component={Cocktails} />
+      <Route path="/recipes" component={Cocktails} />
     </Switch>
   </main>
 );

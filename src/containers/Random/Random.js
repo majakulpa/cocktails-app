@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import CocktailList from "../../components/CocktailList/CocktailList";
 import Button from "../../components/Button/Button";
 import classes from "./Random.css";
+import Loader from "./../../components/UI/Loader";
 
 class Random extends Component {
   state = {
@@ -45,7 +46,7 @@ class Random extends Component {
       <div className={classes.Container}>
         <Button clicked={this.randomCocktailHandler} text="Next" />
 
-        {loading ? "Loading..." : <CocktailList cocktail={filteredCocktails} />}
+        {loading ? <Loader /> : <CocktailList cocktail={filteredCocktails} />}
       </div>
     );
   }

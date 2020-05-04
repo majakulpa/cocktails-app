@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 //import axios from "axios";
 import CocktailList from "../../components/CocktailList/CocktailList";
+import Loader from "./../../components/UI/Loader";
+import classes from "./Cocktails.css";
 
 class Cocktails extends Component {
   state = {
@@ -11,7 +13,9 @@ class Cocktails extends Component {
 
   //send name of ingredient to search by ingredient
   onChange = event => {
-    this.setState({ name: event.target.value });
+    this.setState({
+      name: event.target.value
+    });
   };
 
   //search by ingredient
@@ -36,9 +40,8 @@ class Cocktails extends Component {
     const { drinks, name } = this.state;
     if (!drinks) {
       return (
-        <div>
-          <h3>Search by cocktail name</h3>
-          <form onSubmit={this.handleSubmit}>
+        <div className={classes.Main}>
+          <form onSubmit={this.handleSubmit} className={classes.Search}>
             <input value={name} onChange={this.onChange} />
             <button>Search!</button>
           </form>
@@ -52,17 +55,23 @@ class Cocktails extends Component {
       });
       return (
         <div>
-          <h3>Search by cocktail name</h3>
-          <form onSubmit={this.handleSubmit}>
-            <input value={name} onChange={this.onChange} />
-            <button>Search!</button>
-          </form>
-
-          {loading ? (
-            "Loading..."
-          ) : (
-            <CocktailList cocktail={filteredCocktails} />
-          )}
+          <div className={classes.Main}>
+            <form onSubmit={this.handleSubmit} className={classes.Search}>
+              <input
+                value={name}
+                onChange={this.onChange}
+                placeholder="Search cocktails..."
+              />
+              <button>Search</button>
+            </form>
+          </div>
+          <div className={classes.Scroll}>
+            {loading ? (
+              <Loader />
+            ) : (
+              <CocktailList cocktail={filteredCocktails} />
+            )}
+          </div>
         </div>
       );
     }

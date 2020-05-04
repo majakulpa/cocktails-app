@@ -12,7 +12,7 @@ const navigationItems = () => (
         </NavLink>
       </NavigationItem>
       <NavigationItem>
-        <NavLink to="/cocktails" activeClassName={classes.Active}>
+        <NavLink to="/recipes" activeClassName={classes.Active}>
           Recipes
         </NavLink>
       </NavigationItem>
