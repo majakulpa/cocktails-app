@@ -1,10 +1,10 @@
 .Main {
   text-align: center;
+  width: 100vw;
 }
 .Scroll {
   overflow: scroll;
   height: 100vh;
-  width: 100vw;
 }
 .Search input {
   color: #eee;
@@ -17,7 +17,6 @@
   margin: 2rem 0;
   font-family: "Orbitron", sans-serif;
   background: none;
-
   box-shadow: inset 0px 11px 8px -10px #c6e2ff,
     inset 0px -11px 8px -10px #c6e2ff;
 }
@@ -46,15 +45,6 @@
   .Search button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-  }
-  .Search {
-    width: 100vw;
-    white-space: nowrap;
-  }
-  .Search input {
-    width: 60%;
-  }
-  .Search button {
     width: 40%;
   }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-//import axios from "axios";
-//import Card from "../../components/Card/Card";
+import axios from "axios";
 import CocktailList from "../../components/CocktailList/CocktailList";
 import Button from "../../components/Button/Button";
 import classes from "./Random.css";
@@ -17,26 +16,22 @@ class Random extends Component {
     this.randomCocktailHandler();
   }
 
-  // randomCocktailHandler = drinks => {
-  //   axios
-  //     .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-  //     .then(response => {
-  //       this.setState({ drinks: response.data.drinks[0] });
-  //     });
-  // };
-
-  randomCocktailHandler = event => {
-    // event.preventDefault();
-    const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+  randomCocktailHandler = drinks => {
     this.setState({ loading: true });
-    fetch(url)
-      .then(response => response.json())
-      .then(data => this.setState({ loading: false, drinks: data.drinks }));
+    try {
+      axios
+        .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+        .then(response => {
+          this.setState({ loading: false, drinks: response.data.drinks });
+        });
+    } catch (error) {
+      this.setState({ loading: false });
+      console.log(error);
+    }
   };
 
   render() {
     const { drinks, name, loading } = this.state;
-    // const { drinks } = this.state;
 
     const filteredCocktails = drinks.filter(cocktail => {
       return cocktail.strDrink.toLowerCase().includes(name.toLowerCase());
@@ -45,7 +40,6 @@ class Random extends Component {
     return (
       <div className={classes.Container}>
         <Button clicked={this.randomCocktailHandler} text="Next" />
-
         {loading ? <Loader /> : <CocktailList cocktail={filteredCocktails} />}
       </div>
     );

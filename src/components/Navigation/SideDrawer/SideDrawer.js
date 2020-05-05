@@ -3,15 +3,15 @@ import NavigationItems from "./../NavigationItems/NavigationItems";
 import Backdrop from "./../../UI/Backdrop";
 import classes from "./SideDrawer.css";
 
-const SideDrawer = props => {
+const SideDrawer = ({ open, closed }) => {
   let attachedClasses = [classes.SideDrawer, classes.Close];
-  if (props.open) {
+  if (open) {
     attachedClasses = [classes.SideDrawer, classes.Open];
   }
   return (
     <Fragment>
-      <Backdrop show={props.open} clicked={props.closed} />
-      <div className={attachedClasses.join(" ")} onClick={props.closed}>
+      <Backdrop show={open} clicked={closed} />
+      <div className={attachedClasses.join(" ")} onClick={closed}>
         <nav>
           <NavigationItems />
         </nav>

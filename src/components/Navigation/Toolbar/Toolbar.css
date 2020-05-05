@@ -7,7 +7,7 @@
   height: 60px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 1.8rem;
   z-index: 200;
   background: #141414;
 }
@@ -34,5 +34,13 @@
   }
   .DesktopOnly {
     display: none;
+  }
+}
+@media (max-width: 420px) {
+  .Navbar {
+    padding: 0;
+  }
+  .Text {
+    margin-left: 2rem;
   }
 }

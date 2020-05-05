@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import axios from "axios";
+import axios from "axios";
 import CocktailList from "../../components/CocktailList/CocktailList";
 import Loader from "./../../components/UI/Loader";
 import classes from "./Cocktails.css";
@@ -18,22 +18,21 @@ class Cocktails extends Component {
     });
   };
 
-  //search by ingredient
   handleSubmit = event => {
-    event.preventDefault();
-
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${this.state.name}`;
-
     this.setState({ loading: true });
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => this.setState({ loading: false, drinks: data.drinks }))
-      .catch(error => {
-        this.setState({ loading: false });
-        alert("Please provide valid ingredient name!");
-        //console.log(error);
-      });
+    event.preventDefault();
+    try {
+      axios
+        .get(
+          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${this.state.name}`
+        )
+        .then(response => {
+          this.setState({ loading: false, drinks: response.data.drinks });
+        });
+    } catch (error) {
+      this.setState({ loading: false });
+      console.log(error);
+    }
   };
 
   render() {
@@ -60,7 +59,7 @@ class Cocktails extends Component {
               <input
                 value={name}
                 onChange={this.onChange}
-                placeholder="Search cocktails..."
+                placeholder="Search..."
               />
               <button>Search</button>
             </form>

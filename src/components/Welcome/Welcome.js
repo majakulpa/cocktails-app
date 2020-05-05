@@ -16,7 +16,7 @@ const welcome = () => (
     </div>
     <NavLink to="/random" className={classes.TextLink}>
       <div className={classes.Text}>cocktails recipes</div>
-      <Button text="Start" />
+      <Button text="discover" />
     </NavLink>
   </div>
 );

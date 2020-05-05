@@ -71,6 +71,7 @@
   .Card {
     display: flex;
     flex-flow: column-reverse;
+    line-height: 1.6;
   }
   .Image {
     width: 100%;
