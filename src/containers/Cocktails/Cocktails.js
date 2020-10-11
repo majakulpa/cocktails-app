@@ -40,7 +40,11 @@ class Cocktails extends Component {
       return (
         <div className={classes.Main}>
           <form onSubmit={this.handleSubmit} className={classes.Search}>
-            <input value={name} onChange={this.onChange} />
+            <input
+              aria-label="Search by alcohol name"
+              value={name}
+              onChange={this.onChange}
+            />
             <button>Search!</button>
           </form>
           <p>Please provide valid cocktail name!</p>
@@ -56,6 +60,7 @@ class Cocktails extends Component {
           <div className={classes.Main}>
             <form onSubmit={this.handleSubmit} className={classes.Search}>
               <input
+                aria-label="Search by alcohol name"
                 value={name}
                 onChange={this.onChange}
                 placeholder="Search..."

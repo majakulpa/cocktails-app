@@ -7,12 +7,12 @@ const navigationItems = () => (
   <Fragment>
     <ul className={classes.List}>
       <NavigationItem>
-        <NavLink to="/random" activeClassName={classes.Active}>
+        <NavLink to="/cocktails-app/random" activeClassName={classes.Active}>
           Random Cocktail
         </NavLink>
       </NavigationItem>
       <NavigationItem>
-        <NavLink to="/recipes" activeClassName={classes.Active}>
+        <NavLink to="/cocktails-app/recipes" activeClassName={classes.Active}>
           Recipes
         </NavLink>
       </NavigationItem>

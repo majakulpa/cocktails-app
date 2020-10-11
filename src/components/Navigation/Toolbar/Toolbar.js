@@ -7,7 +7,7 @@ import classes from "./Toolbar.css";
 const Toolbar = ({ openDrawer }) => {
   return (
     <div className={classes.Navbar}>
-      <NavLink to="/" className={classes.Text}>
+      <NavLink to="/cocktails-app/" className={classes.Text}>
         <div>cr</div>
       </NavLink>
       <Toggle opened={openDrawer} />

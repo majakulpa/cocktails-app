@@ -14,7 +14,7 @@ const welcome = () => (
         <div className={classes.Base}></div>
       </div>
     </div>
-    <NavLink to="/random" className={classes.TextLink}>
+    <NavLink to="/cocktails-app/random" className={classes.TextLink}>
       <div className={classes.Text}>cocktails recipes</div>
       <Button text="discover" />
     </NavLink>
