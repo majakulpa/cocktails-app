@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "scope": "https://majakulpa.github.io/cocktails-app/",
-  "start_url": "https://majakulpa.github.io/cocktails-app/",
+  "scope": "/cocktails-app/",
+  "start_url": "/cocktails-app/",
   "display": "standalone",
   "theme_color": "#2196f3",
   "background_color": "#141414"
