@@ -1,11 +1,6 @@
 {
-  "name": "Cocktails Recipes",
   "short_name": "Cocktails",
-  "theme_color": "#2196f3",
-  "background_color": "#141414",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "name": "Cocktails Recipes",
   "icons": [
     {
       "src": "favicon.ico",
@@ -22,5 +17,10 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "scope": "https://majakulpa.github.io/cocktails-app/",
+  "start_url": "https://majakulpa.github.io/cocktails-app/",
+  "display": "standalone",
+  "theme_color": "#2196f3",
+  "background_color": "#141414"
 }
