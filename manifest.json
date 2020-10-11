@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "scope": "/cocktails-app/",
-  "start_url": "/cocktails-app/",
+  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#2196f3",
   "background_color": "#141414"
