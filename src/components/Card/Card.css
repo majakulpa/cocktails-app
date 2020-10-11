@@ -3,7 +3,7 @@
   font-weight: 300;
   overflow: hidden;
   border-radius: 10px;
-  color: #eee;
+  color: #c6e2ff;
   margin: 2rem auto;
 }
 .Recipe {
@@ -81,6 +81,6 @@
   .Recipe {
     padding: 0.5rem 1rem 2rem 1rem;
     background: linear-gradient(to top, #282829 20%, #090909 90%);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 }

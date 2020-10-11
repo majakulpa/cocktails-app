@@ -31,7 +31,6 @@ class Cocktails extends Component {
         });
     } catch (error) {
       this.setState({ loading: false });
-      console.log(error);
     }
   };
 
