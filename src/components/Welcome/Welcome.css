@@ -61,6 +61,10 @@
   left: 50%;
   transform: translate(-50%, -75%);
   background: #000;
+  -webkit-box-shadow: inset 0 0 6px rgba(202, 228, 225, 0.98),
+    0 0 30px rgba(202, 228, 225, 0.42), inset 0 0 12px rgba(30, 132, 242, 0.58),
+    inset 0 0 22px rgba(30, 132, 242, 0.84),
+    inset 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px rgba(30, 132, 242, 1);
   box-shadow: inset 0 0 6px rgba(202, 228, 225, 0.98),
     0 0 30px rgba(202, 228, 225, 0.42), inset 0 0 12px rgba(30, 132, 242, 0.58),
     inset 0 0 22px rgba(30, 132, 242, 0.84),

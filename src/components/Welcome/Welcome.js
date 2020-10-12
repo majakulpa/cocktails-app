@@ -15,7 +15,7 @@ const welcome = () => (
       </div>
     </div>
     <NavLink to="/cocktails-app/random" className={classes.TextLink}>
-      <div className={classes.Text}>cocktails recipes</div>
+      <div className={classes.Text}>cocktail recipes</div>
       <Button text="discover" />
     </NavLink>
   </div>
