@@ -28,7 +28,7 @@
   left: 6px;
   right: 6px;
   bottom: 6px;
-  background: #141414;
+  background: var(--dark);
   border-radius: 50%;
   z-index: 10;
 }

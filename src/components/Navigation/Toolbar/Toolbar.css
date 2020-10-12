@@ -9,16 +9,16 @@
   justify-content: space-between;
   padding: 0 1.8rem;
   z-index: 200;
-  background: #141414;
+  background: var(--dark);
 }
 
 .Text {
   text-decoration: none;
   font-size: 3rem;
-  color: #c6e2ff;
+  color: var(--light);
   font-family: "Orbitron", sans-serif;
   cursor: pointer;
-  transition: 0.5s all ease;
+  transition: var(--transtion);
 }
 
 .Text:hover {
@@ -30,7 +30,7 @@
 
 @media (max-width: 749px) {
   .Text {
-    font-size: 1.5rem;
+    font-size: var(--bg-font);
   }
   .DesktopOnly {
     display: none;

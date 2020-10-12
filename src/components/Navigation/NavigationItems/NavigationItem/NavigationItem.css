@@ -6,10 +6,10 @@
   text-decoration: none;
   position: relative;
   padding: 0.5rem 1rem;
-  color: #c6e2ff;
+  color: var(--light);
   font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
-  transition: all 0.5s ease-out;
+  transition: var(--transition);
   cursor: pointer;
   user-select: none;
 }
@@ -42,8 +42,8 @@
 
   .Itemhover a:before {
     transition-delay: 0s;
-    box-shadow: inset 0px 11px 8px -10px #c6e2ff,
-      inset 0px -11px 8px -10px #c6e2ff;
+    box-shadow: inset 0px 11px 8px -10px var(--light),
+      inset 0px -11px 8px -10px var(--light);
   }
 
   .Item a:before {
@@ -51,7 +51,7 @@
     left: 50%;
     height: 100%;
     width: 0;
-    border: 1px solid #c6e2ff;
+    border: 1px solid var(--light);
     border-left: 0;
     border-right: 0;
   }

@@ -1,14 +1,14 @@
 .Button {
   position: relative;
   padding: 0.5rem 2rem;
-  font-size: 1.4rem;
-  color: #c6e2ff;
+  font-size: var(--bg-font);
+  color: var(--light);
   font-family: "Orbitron", sans-serif;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   background-color: transparent;
   border: none;
-  transition: all 0.5s ease-out;
+  transition: var(--transition);
   cursor: pointer;
   user-select: none;
 }
@@ -32,8 +32,8 @@
 
 .Button:hover:before {
   transition-delay: 0s;
-  box-shadow: inset 0px 11px 8px -10px #c6e2ff,
-    inset 0px -11px 8px -10px #c6e2ff;
+  box-shadow: inset 0px 11px 8px -10px var(--light),
+    inset 0px -11px 8px -10px var(--light);
 }
 
 .Button:before {
@@ -41,7 +41,7 @@
   left: 50%;
   height: 100%;
   width: 0;
-  border: 1px solid #c6e2ff;
+  border: 1px solid var(--light);
   border-left: 0;
   border-right: 0;
 }
@@ -52,6 +52,6 @@
 }
 @media (max-width: 500px) {
   .Button {
-    font-size: 1.2rem;
+    font-size: var(--md-font);
   }
 }

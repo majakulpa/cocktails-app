@@ -1,12 +1,19 @@
+:root {
+  --dark: #141414;
+  --light: #c6e2ff;
+  --bg-font: 1.4rem;
+  --md-font: 1.2rem;
+  --transition: all 0.5s ease-out;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-display: swap;
   font-family: "Open Sans", sans-serif;
-  color: #fff;
-  min-height: 100vh;
-  background: #141414;
+  color: var(--light);
+  background: var(--dark);
   width: 100vw;
   min-height: 100vh;
   font-size: 1.2em;

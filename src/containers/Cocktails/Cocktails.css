@@ -7,24 +7,24 @@
   height: 100vh;
 }
 .Search input {
-  color: #eee;
+  color: var(--light);
 }
 .Search input,
 .Search button {
   padding: 0.5rem 2rem;
-  font-size: 1.2rem;
+  font-size: var(--md-font);
   border: none;
   margin: 2rem 0;
   font-family: "Orbitron", sans-serif;
   background: none;
-  box-shadow: inset 0px 11px 8px -10px #c6e2ff,
-    inset 0px -11px 8px -10px #c6e2ff;
+  box-shadow: inset 0px 11px 8px -10px var(--light),
+    inset 0px -11px 8px -10px var(--light);
 }
 .Search button {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  color: #c6e2ff;
+  color: var(--light);
 }
 .Search button:hover {
   text-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
@@ -38,13 +38,12 @@
 }
 .Main p {
   letter-spacing: 0.1rem;
-  color: #c6e2ff;
+  color: var(--light);
 }
 @media (max-width: 520px) {
   .Search input,
   .Search button {
     padding: 0.5rem 1rem;
-    font-size: 1rem;
     width: 40%;
   }
 }

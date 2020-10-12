@@ -102,11 +102,11 @@
 
 .Text {
   margin-bottom: 1rem;
-  color: #c6e2ff;
+  color: var(--light);
   font-size: 2rem;
   font-family: "Orbitron", sans-serif;
   cursor: pointer;
-  transition: 0.5s all ease;
+  transition: var(--transition);
   text-shadow: 0 0 2px rgba(202, 228, 225, 0.92),
     0 0 10px rgba(202, 228, 225, 0.34), 0 0 10px rgba(30, 132, 242, 0.52),
     0 0 10px rgba(30, 132, 242, 0.92), 0 0 20px rgba(30, 132, 242, 0.78),
@@ -114,6 +114,6 @@
 }
 @media (max-width: 500px) {
   .Text {
-    font-size: 1.5rem;
+    font-size: var(--bg-font);
   }
 }
