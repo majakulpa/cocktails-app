@@ -1,8 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import axios from "axios";
-import CocktailList from "../../components/CocktailList/CocktailList";
 import Loader from "./../../components/UI/Loader";
 import classes from "./Cocktails.css";
+const CocktailList = React.lazy(() =>
+  import("../../components/CocktailList/CocktailList")
+);
 
 class Cocktails extends Component {
   state = {
@@ -56,26 +58,28 @@ class Cocktails extends Component {
         return cocktail.strDrink.toLowerCase().includes(name.toLowerCase());
       });
       return (
-        <div>
-          <div className={classes.Main}>
-            <form onSubmit={this.handleSubmit} className={classes.Search}>
-              <input
-                aria-label="Search by alcohol name"
-                value={name}
-                onChange={this.onChange}
-                placeholder="Search..."
-              />
-              <button>Search</button>
-            </form>
+        <Suspense fallback={<Loader />}>
+          <div>
+            <div className={classes.Main}>
+              <form onSubmit={this.handleSubmit} className={classes.Search}>
+                <input
+                  aria-label="Search by alcohol name"
+                  value={name}
+                  onChange={this.onChange}
+                  placeholder="Search..."
+                />
+                <button>Search</button>
+              </form>
+            </div>
+            <div className={classes.Scroll}>
+              {loading ? (
+                <Loader />
+              ) : (
+                <CocktailList cocktail={filteredCocktails} />
+              )}
+            </div>
           </div>
-          <div className={classes.Scroll}>
-            {loading ? (
-              <Loader />
-            ) : (
-              <CocktailList cocktail={filteredCocktails} />
-            )}
-          </div>
-        </div>
+        </Suspense>
       );
     }
   }

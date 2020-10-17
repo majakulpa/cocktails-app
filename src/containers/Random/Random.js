@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import axios from "axios";
-import CocktailList from "../../components/CocktailList/CocktailList";
 import Button from "../../components/Button/Button";
 import classes from "./Random.css";
 import Loader from "./../../components/UI/Loader";
+const CocktailList = React.lazy(() =>
+  import("../../components/CocktailList/CocktailList")
+);
 
 class Random extends Component {
   state = {
@@ -37,10 +39,12 @@ class Random extends Component {
     });
 
     return (
-      <div className={classes.Container}>
-        <Button clicked={this.randomCocktailHandler} text="Next" />
-        {loading ? <Loader /> : <CocktailList cocktail={filteredCocktails} />}
-      </div>
+      <Suspense fallback={<Loader />}>
+        <div className={classes.Container}>
+          <Button clicked={this.randomCocktailHandler} text="Next" />
+          {loading ? <Loader /> : <CocktailList cocktail={filteredCocktails} />}
+        </div>
+      </Suspense>
     );
   }
 }
